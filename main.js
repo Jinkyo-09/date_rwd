@@ -53,9 +53,19 @@ if (hours < 12) {
 let newHr = 0;
 
 if (hours > 12) {
-	newHr = hours - 12 + 'pm';
+	newHr = hours - 12;
+	if (newHr < 10) {
+		newHr = '0' + newHr + 'pm';
+	} else {
+		newHr = newHr + 'pm';
+	}
 } else {
-	newHr = hours + 'am';
+	newHr = hours;
+	if (newHr > 10) {
+		newHr = '0' + newHr + 'am';
+	} else {
+		newHr = newHr + 'am';
+	}
 }
 
 console.log(newHr);
