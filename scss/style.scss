@@ -1,1 +1,39 @@
 @import 'reset';
+
+body {
+	width: 100%;
+	height: 100vh;
+	background-color: gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	article {
+		width: 60%;
+		height: 50%;
+		background-color: rgba(0, 0, 0, 0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		font-size: 50px;
+		box-shadow: 0px 0px 15px #000;
+		border-radius: 15px;
+	}
+
+	&.morning {
+		background-color: orange;
+	}
+
+	&.afternoon {
+		background-color: lightblue;
+	}
+
+	&.evening {
+		background-color: pink;
+	}
+
+	&.night {
+		background-color: darkcyan;
+	}
+}
